@@ -1,0 +1,15 @@
+<input class="picker" [(colorPicker)]="currentColor" [style.background]="currentColor"/> 
+  <button class="options"         (click) = "generate(100)"> 10 x 10 </button>
+  <button class="options option1" (click) = "generate(225)"> 15 x 15 </button>
+  <button class="options option2" (click) = "generate(400)"> 20 x 20 </button>
+
+<button class = "options option3" (click)="resetAll()">Delete</button>
+<div class="container">
+   <div class="shape" 
+        [style.background] = "item.color" 
+        *ngFor="let item of items; let i = index " 
+        (click) = "fill(item)">      
+   </div>
+ 
+
+
